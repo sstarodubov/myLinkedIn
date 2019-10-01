@@ -78,7 +78,11 @@
             </plugins>
         </build>
         <dependencies>
-
+            <dependency>
+                <groupId>org.sitemesh</groupId>
+                <artifactId>sitemesh</artifactId>
+                <version>3.0.1</version>
+            </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
@@ -135,6 +139,18 @@
                 <artifactId>spring-jdbc</artifactId>
                 <version>5.1.9.RELEASE</version>
             </dependency>
+            <dependency>
+                <groupId>net.coobird</groupId>
+                <artifactId>thumbnailator</artifactId>
+                <version>0.4.8</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>2.6</version>
+            </dependency>
+
+
 
         </dependencies>
 </project>

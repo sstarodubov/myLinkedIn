@@ -7,12 +7,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/search")
+@WebServlet("/main")
 public class SearchController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/jsp/search-form.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/userProfile.jsp").forward(req,resp);
     }
 
     @Override
