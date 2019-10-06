@@ -1,18 +1,17 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <!--  This file has been downloaded from https://bootdey.com  -->
     <!--  All snippets are MIT license https://bootdey.com/license -->
-    <title>Bootdey.com</title>
+    <title>Settings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
-        body{
-            margin-top:20px;
-            background:#f8f8f8
+        body {
+            margin-top: 20px;
+            background: #f8f8f8
         }
     </style>
 </head>
@@ -20,18 +19,6 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
     <div class="row flex-lg-nowrap">
-        <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
-            <div class="card p-3">
-                <div class="e-navlist e-navlist--active-bg">
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link px-2 active" href="./overview.html"><i class="fa fa-fw fa-bar-chart mr-1"></i><span>Overview</span></a></li>
-                        <li class="nav-item"><a class="nav-link px-2" href="./users.html"><i class="fa fa-fw fa-th mr-1"></i><span>CRUD</span></a></li>
-                        <li class="nav-item"><a class="nav-link px-2" href="./settings.html"><i class="fa fa-fw fa-cog mr-1"></i><span>Settings</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
         <div class="col">
             <div class="row">
                 <div class="col mb-3">
@@ -41,7 +28,8 @@
                                 <div class="row">
                                     <div class="col-12 col-sm-auto mb-3">
                                         <div class="mx-auto" style="width: 140px;">
-                                            <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                            <div class="d-flex justify-content-center align-items-center rounded"
+                                                 style="height: 140px; background-color: rgb(233, 236, 239);">
                                                 <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
                                             </div>
                                         </div>
@@ -49,18 +37,10 @@
                                     <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                                         <div class="text-center text-sm-left mb-2 mb-sm-0">
                                             <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4>
-                                            <p class="mb-0">@johnny.s</p>
-                                            <div class="text-muted"><small>Last seen 2 hours ago</small></div>
-                                            <div class="mt-2">
-                                                <button class="btn btn-primary" type="button">
-                                                    <i class="fa fa-fw fa-camera"></i>
-                                                    <span>Change Photo</span>
-                                                </button>
+                                            <div class="form-group mt-2">
+                                                <input type="file" class="form-control-file"
+                                                       id="exampleFormControlFile1">
                                             </div>
-                                        </div>
-                                        <div class="text-center text-sm-right">
-                                            <span class="badge badge-secondary">administrator</span>
-                                            <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
                                         </div>
                                     </div>
                                 </div>
@@ -76,13 +56,15 @@
                                                         <div class="col">
                                                             <div class="form-group">
                                                                 <label>Full Name</label>
-                                                                <input class="form-control" type="text" name="name" placeholder="John Smith" value="John Smith">
+                                                                <input class="form-control" type="text" name="name"
+                                                                       placeholder="Name" value="">
                                                             </div>
                                                         </div>
                                                         <div class="col">
                                                             <div class="form-group">
                                                                 <label>Username</label>
-                                                                <input class="form-control" type="text" name="username" placeholder="johnny.s" value="johnny.s">
+                                                                <input class="form-control" type="text" name="username"
+                                                                       placeholder="username" value="">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -90,7 +72,8 @@
                                                         <div class="col">
                                                             <div class="form-group">
                                                                 <label>Email</label>
-                                                                <input class="form-control" type="text" placeholder="user@example.com">
+                                                                <input class="form-control" type="text"
+                                                                       placeholder="user@example.com">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -98,58 +81,50 @@
                                                         <div class="col mb-3">
                                                             <div class="form-group">
                                                                 <label>About</label>
-                                                                <textarea class="form-control" rows="5" placeholder="My Bio"></textarea>
+                                                                <textarea class="form-control" rows="5"
+                                                                          placeholder="My Bio"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col mb-3">
+                                                            <div class="form-group">
+                                                                <label>Skills</label>
+                                                                <textarea class="form-control" rows="5"
+                                                                          placeholder="type your skills here"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-12 col-sm-6 mb-3">
+                                                <div class="col-12 col-sm-12 mb-3">
                                                     <div class="mb-2"><b>Change Password</b></div>
                                                     <div class="row">
                                                         <div class="col">
                                                             <div class="form-group">
                                                                 <label>Current Password</label>
-                                                                <input class="form-control" type="password" placeholder="••••••">
+                                                                <input class="form-control" type="password"
+                                                                       placeholder="••••••">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col">
+                                                        <div class="col-12">
                                                             <div class="form-group">
                                                                 <label>New Password</label>
-                                                                <input class="form-control" type="password" placeholder="••••••">
+                                                                <input class="form-control" type="password"
+                                                                       placeholder="••••••">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col">
+                                                        <div class="col-12">
                                                             <div class="form-group">
-                                                                <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                                                                <input class="form-control" type="password" placeholder="••••••"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-5 offset-sm-1 mb-3">
-                                                    <div class="mb-2"><b>Keeping in Touch</b></div>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <label>Email Notifications</label>
-                                                            <div class="custom-controls-stacked px-2">
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="notifications-blog" checked="">
-                                                                    <label class="custom-control-label" for="notifications-blog">Blog posts</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="notifications-news" checked="">
-                                                                    <label class="custom-control-label" for="notifications-news">Newsletter</label>
-                                                                </div>
-                                                                <div class="custom-control custom-checkbox">
-                                                                    <input type="checkbox" class="custom-control-input" id="notifications-offers" checked="">
-                                                                    <label class="custom-control-label" for="notifications-offers">Personal Offers</label>
-                                                                </div>
-                                                            </div>
+                                                                <label>Confirm <span
+                                                                        class="d-none d-xl-inline">Password</span></label>
+                                                                <input class="form-control" type="password"
+                                                                       placeholder="••••••"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -172,10 +147,10 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="px-xl-3">
-                                <button class="btn btn-block btn-secondary">
+                                <a class="btn btn-block btn-secondary" href="/login">
                                     <i class="fa fa-sign-out"></i>
                                     <span>Logout</span>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -183,7 +158,7 @@
                         <div class="card-body">
                             <h6 class="card-title font-weight-bold">Support</h6>
                             <p class="card-text">Get fast, free help from our friendly assistants.</p>
-                            <button type="button" class="btn btn-primary">Contact Us</button>
+                            <p>+7 (927) 208 70 71</p>
                         </div>
                     </div>
                 </div>
