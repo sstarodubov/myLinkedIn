@@ -1,8 +1,8 @@
-# Creating Spring MVC Project in Eclipse Using Maven
+#Spring MVC Hibernate Mysql integration CRUD Example 
 
 Guide
 
-This is a part of the tutorial http://javabycode.com/spring-framework-tutorial/spring-mvc-tutorial/creating-spring-mvc-project-in-eclipse-using-maven.html
+This is a part of the tutorial http://javabycode.com/spring-framework-tutorial/spring-mvc-tutorial/spring-mvc-hibernate-mysql-integration-crud-example-tutorial.html
 
 What you'll need
 
@@ -11,4 +11,4 @@ Maven 3 or later
 Spring MVC 4.2.6.RELEASE  
 Build
 
-mvn clean install   
+mvn clean install    

@@ -1,4 +1,10 @@
-/home/haxul/IdeaProjects/mvc/spring-mvc-maven-eclipse-example/src/main/java/com/javabycode/config/MyWebConfig.java
-/home/haxul/IdeaProjects/mvc/spring-mvc-maven-eclipse-example/src/main/java/com/javabycode/model/Employee.java
-/home/haxul/IdeaProjects/mvc/spring-mvc-maven-eclipse-example/src/main/java/com/javabycode/springmvc/MyController.java
-/home/haxul/IdeaProjects/mvc/spring-mvc-maven-eclipse-example/src/main/java/com/javabycode/config/ServletInitializer.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/model/Student.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/service/StudentServiceImpl.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/dao/StudentDaoImpl.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/configuration/MyWebConfig.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/dao/AbstractDao.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/controller/MyController.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/configuration/MyHibernateConfig.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/service/StudentService.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/dao/StudentDao.java
+/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/src/main/java/com/javabycode/springmvc/configuration/ServletInitializer.java

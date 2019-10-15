@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="LinkedNet@localhost" uuid="fa7d69eb-b9bd-4333-bf92-8ce1bd78bea3">
+    <data-source source="LOCAL" name="resumeDB@localhost" uuid="e5a8da09-3282-4bc2-a3ae-5c9f6ef87750">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/LinkedNet</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/resumeDB</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />

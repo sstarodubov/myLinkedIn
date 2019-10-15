@@ -2,102 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="springmvc:war exploded" />
+      <artifact name="SpringMVCHibernateExample:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbabc4a8-28a7-4b17-8af6-7e3478e5b2b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/flatpickr.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/jquery.mCustomScrollbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/jquery.range.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/line-awesome-font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/line-awesome-font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/line-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/line-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/line-awesome.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/line-awesome.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/line-awesome.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/line-awesome.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/line-awesome.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/all-out.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cc-icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cc-icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cc-icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cc-icon4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/chat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/clock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cm-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cm-main-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cmp-icon9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/com.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/copy-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/copy-icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/dlr-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/envelop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/ic1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/ic2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/ic3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/ic4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/ic5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/ic6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/icon9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/liked-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/lt-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/photo-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/price1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/price2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/price3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/price4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/pro-icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/pro-icon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/pro-icon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/pro-icon4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/process-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/smley.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/up-btn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/images/wd-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/flatpickr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/jquery.mCustomScrollbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/jquery.range-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/scrollbar.js" afterDir="false" />
-    </list>
+    <list default="true" id="56805657-c9a8-487e-8e3b-c8354d108d7f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,12 +27,18 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LinkedNet@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="resumeDB@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="LinkedNet@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="resumeDB@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="resumeDB@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="resumeDB: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -131,18 +46,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="AnnotationType" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="true" />
+    <option name="FILTER_WARNINGS" value="false" />
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
@@ -154,27 +65,12 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1RlATKNeVo7zKqpJDmGMvl4yURk" />
+  <component name="ProjectId" id="1SCvAAuUtJpx9wW7hXgz5gjbMJz" />
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../myLinkedIn" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.javabycode.springmvc" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -189,18 +85,17 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+    <configuration name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="springmvc:war exploded">
+        <artifact name="SpringMVCHibernateExample:war">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_springmvc_2" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_SpringMVCHibernateExample_3" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -208,7 +103,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="39787" />
+        <option name="DEBUG_PORT" value="35157" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -258,7 +153,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="springmvc:war exploded" />
+          <artifact name="SpringMVCHibernateExample:war" />
         </option>
       </method>
     </configuration>
@@ -270,12 +165,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5046fc45" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ad5bba99" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5046fc45" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3ba7da94" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ad5bba99" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@399667b2" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -288,40 +183,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cbabc4a8-28a7-4b17-8af6-7e3478e5b2b1" name="Default Changelist" comment="" />
-      <created>1570231316009</created>
+      <changelist id="56805657-c9a8-487e-8e3b-c8354d108d7f" name="Default Changelist" comment="" />
+      <created>1571080245636</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570231316009</updated>
-      <workItem from="1570231320031" duration="71000" />
-      <workItem from="1570280931729" duration="297000" />
-      <workItem from="1570296080124" duration="750000" />
-      <workItem from="1570296873953" duration="116000" />
-      <workItem from="1570298544191" duration="680000" />
-      <workItem from="1570299253554" duration="8147000" />
-      <workItem from="1570349949415" duration="169000" />
-      <workItem from="1570350811515" duration="35000" />
-      <workItem from="1570350949163" duration="152000" />
-      <workItem from="1570351850068" duration="6000" />
-      <workItem from="1570379932498" duration="4585000" />
-      <workItem from="1570467363936" duration="1400000" />
+      <updated>1571080245636</updated>
+      <workItem from="1571080249628" duration="1769000" />
+      <workItem from="1571082057988" duration="919000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
