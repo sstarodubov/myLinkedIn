@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>goog</h1>
+    <h1>test</h1>
+<h1>name: ${name}</h1>
 </body>
 </html>

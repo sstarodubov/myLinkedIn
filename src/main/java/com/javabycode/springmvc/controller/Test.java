@@ -17,9 +17,12 @@ public class Test {
     private WriterServiceImpl dao;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String test() {
-        Writer writer = new Writer("sergey", "samare");
-        dao.saveWriter(writer);
+    public String showPage() {
+        return "signup";
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public String registerUser() {
         return "test";
     }
 }
