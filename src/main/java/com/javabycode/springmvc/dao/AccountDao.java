@@ -4,12 +4,21 @@ import com.javabycode.springmvc.model.Account;
 import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository("accountDao")
 public class AccountDao extends AbstractDao<Integer, Account> implements Accountable{
 
     @Override
     public Account findById(int id) {
         return getByKey(id);
+    }
+
+    public Account findByEmail(String email) {
+        Query query = getSession().createQuery("from Account a where a.email=:email");
+        query.setString("email", email);
+        Account account = (Account) query.uniqueResult();
+        return account;
     }
 
     @Override

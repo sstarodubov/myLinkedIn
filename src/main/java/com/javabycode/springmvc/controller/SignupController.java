@@ -2,6 +2,7 @@ package com.javabycode.springmvc.controller;
 
 import com.javabycode.springmvc.model.Account;
 import com.javabycode.springmvc.service.AccountService;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class SignupController {
 
     @Autowired
-    private AccountService accountService;
+    private AccountService service;
 
     @RequestMapping(method = RequestMethod.GET)
     public String getPage() {
@@ -24,8 +25,19 @@ public class SignupController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String registerAccount(@ModelAttribute("account") Account account, Model model) {
-        System.out.println(account.getEmail());
-        model.addAttribute("name", account.getName());
-        return "test";
+        Boolean isInputDataCorrect = service.checkInputFields(account);
+        Boolean isEmailCorrect = service.checkCorrectnessOfEmail(account.getEmail());
+        if (!isInputDataCorrect || !isEmailCorrect) {
+            model.addAttribute("error", "the field is not correct");
+            return "signup";
+        }
+        String email = account.getEmail();
+        Account accountInDataBase = service.findByEmail(email);
+        if (accountInDataBase == null) {
+            service.saveAccount(account);
+            return "signin";
+        }
+        model.addAttribute("error", "email is used already");
+        return "signup";
     }
 }

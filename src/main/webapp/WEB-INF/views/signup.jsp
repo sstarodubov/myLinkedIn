@@ -1,4 +1,4 @@
-<%--
+<%@ page import="org.springframework.http.HttpStatus" %><%--
   Created by IntelliJ IDEA.
   User: root
   Date: 01.10.2019
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
@@ -28,6 +28,11 @@
 <body>
 <div class="card bg-light">
     <article class="card-body mx-auto" style="max-width: 400px;">
+        <% String error = (String) request.getAttribute("error");
+            if (error != "") {
+                response.setStatus(HttpStatus.UNPROCESSABLE_ENTITY.value());%>
+                <h4 style="text-align: center">${error}</h4>
+        <%}%>
         <h4 class="card-title mt-3 text-center">Create Account</h4>
         <p class="text-center">Get started with your free account</p>
         <form method="post" action="/signup">
@@ -67,9 +72,9 @@
                 <input class="form-control" name="password" placeholder="Create password" type="password">
             </div> <!-- form-group// -->
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
+                <button type="submit" class="btn btn-primary btn-block"> Create Account</button>
             </div> <!-- form-group// -->
-            <p class="text-center">Have an account? <a href="">Sign In</a> </p>
+            <p class="text-center">Have an account? <a href="">Sign In</a></p>
         </form>
     </article>
 </div> <!-- card.// -->
