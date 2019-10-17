@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -20,14 +22,16 @@ public class AccountService {
     private AccountDao dao;
 
     public Account findById(int id) {
-        return  dao.findById(id);
+        return dao.findById(id);
     }
 
     public void saveAccount(Account account) {
         dao.saveAccount(account);
     }
 
-    public Account findByEmail(String email) {return dao.findByEmail(email);}
+    public Account findByEmail(String email) {
+        return dao.findByEmail(email);
+    }
 
     public Boolean checkInputFields(Account account) {
         String email = account.getEmail();
@@ -41,7 +45,7 @@ public class AccountService {
         characteristics.add(lastname);
         characteristics.add(phone);
         characteristics.add(password);
-        for(String characteristic : characteristics) {
+        for (String characteristic : characteristics) {
             if (characteristic == null) return false;
         }
         return true;

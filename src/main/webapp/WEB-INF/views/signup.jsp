@@ -59,7 +59,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                 </div>
-                <input name="phone" class="form-control" placeholder="Phone number" type="text">
+                <input name="phone" class="form-control" placeholder="+79271112233" type="text">
             </div>
             <div class="form-group input-group">
                 <div class="input-group-prepend">
@@ -70,7 +70,7 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block"> Create Account</button>
             </div> <!-- form-group// -->
-            <p class="text-center">Have an account? <a href="">Sign In</a></p>
+            <p class="text-center">Have an account? <a href="/signin">Sign In</a></p>
         </form>
     </article>
 </div> <!-- card.// -->
