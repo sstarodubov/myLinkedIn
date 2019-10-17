@@ -29,7 +29,7 @@
 <div class="card bg-light">
     <article class="card-body mx-auto" style="max-width: 400px;">
         <% String error = (String) request.getAttribute("error");
-            if (error != "") {
+            if ( error != null ) {
                 response.setStatus(HttpStatus.UNPROCESSABLE_ENTITY.value());%>
                 <h4 style="text-align: center">${error}</h4>
         <%}%>
@@ -59,10 +59,6 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                 </div>
-                <select class="custom-select" style="max-width: 120px;">
-                    <option selected value="1">+7927</option>
-                    <option value="2">+7963</option>
-                </select>
                 <input name="phone" class="form-control" placeholder="Phone number" type="text">
             </div>
             <div class="form-group input-group">

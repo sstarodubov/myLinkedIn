@@ -52,4 +52,10 @@ public class AccountService {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
+
+    public Boolean checkNumberPhone(String phone) {
+        Pattern pattern = Pattern.compile("^\\+7\\d{10}$");
+        Matcher matcher = pattern.matcher(phone);
+        return matcher.matches();
+    }
 }
