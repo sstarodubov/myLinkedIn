@@ -7,23 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <link rel="stylesheet" type="text/css"
-          href="../../static/css/animate.css">
-    <link rel="stylesheet" type="text/css"
-          href="../../static/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"
-          href="../../static/css/line-awesome.css">
-    <link rel="stylesheet" type="text/css"
-          href="../../static/css/line-awesome-font-awesome.min.css">
-    <link rel="stylesheet" type="text/css"
-          href="../../static/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css"
-          href="../../static/lib/slick/slick.css">
-    <link rel="stylesheet" type="text/css"
-          href="../../static/lib/slick/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
-    <link rel="stylesheet" type="text/css"
-          href="../../static/css/responsive.css">
 </head>
 
 
@@ -40,11 +23,11 @@
                         <img src="http://via.placeholder.com/30x30" alt=""> <a
                             href="#" title="">${name}</a> <i class="la la-sort-down"></i>
                     </div>
-					<div class="user-account-settingss">
-						<h3 cluser-account-settingss activeass="tc">
-							<a href="/edit" title="">Settings</a>
-						</h3>
-						<h3 cluser-account-settingss activeass="tc">
+                    <div class="user-account-settingss">
+                        <h3 cluser-account-settingss activeass="tc">
+                            <a href="/edit" title="">Settings</a>
+                        </h3>
+                        <h3 cluser-account-settingss activeass="tc">
                             <a href="/login" title="">Logout</a>
                         </h3>
                     </div>
@@ -172,7 +155,10 @@
 </div>
 <!--theme-layout end-->
 
-
+<script>
+    const accessToken = "${accessToken}";
+    localStorage.setItem("accessToken", accessToken);
+</script>
 <script type="text/javascript" src="../../static/js/jquery.min.js"></script>
 <script type="text/javascript" src="../../static/js/popper.js"></script>
 <script type="text/javascript" src="../../static/js/bootstrap.min.js"></script>

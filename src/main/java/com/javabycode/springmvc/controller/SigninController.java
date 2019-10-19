@@ -13,11 +13,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletResponse;
 import java.security.NoSuchAlgorithmException;
 
 
-@Controller("/signin")
+@Controller
+@RequestMapping("/signin")
 public class SigninController {
 
     @Autowired
@@ -35,7 +38,7 @@ public class SigninController {
     }
 
     @PostMapping
-    public String handleAuth(@ModelAttribute("authForm") AuthForm form, Model model) throws NoSuchAlgorithmException {
+    public String handleAuth(@ModelAttribute("authForm") AuthForm form, Model model, HttpServletResponse response) throws NoSuchAlgorithmException {
         String email = form.getEmail();
         Boolean isCorrectEmail = accountService.checkCorrectnessOfEmail(email);
         String password = form.getPassword();
@@ -58,8 +61,10 @@ public class SigninController {
         }
         String tokenValue = StringRandom.generateRandomString(60);
         AccessToken token = new AccessToken(AccessTokenService.TTL, account, tokenValue);
+        response.setHeader("Authorization", tokenValue);
         service.save(token);
-        return "userProfile";
+        model.addAttribute("accessToken", tokenValue);
+        return "redirect: /userProfile/" + account.getId() ;
     }
 
     private void sendErrorToView(Model model, String message) {

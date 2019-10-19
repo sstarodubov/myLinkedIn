@@ -45,7 +45,7 @@ public class SignupController {
             String hashedPassword = securityService.generateHashPassword(saltedPassword);
             account.setPassword(hashedPassword);
             service.saveAccount(account);
-            return "signin";
+            return "redirect:/signin";
         }
         model.addAttribute("error", "email is used already");
         return "signup";

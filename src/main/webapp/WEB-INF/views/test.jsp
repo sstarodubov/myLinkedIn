@@ -12,6 +12,8 @@
 </head>
 <body>
     <h1>test</h1>
+    <% String token = response.getHeader("accessToken");%>
+    <h1>accessToken: <%= token%></h1>
 <h1>name: ${name}</h1>
 </body>
 </html>
