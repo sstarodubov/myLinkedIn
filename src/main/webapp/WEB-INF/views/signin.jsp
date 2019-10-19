@@ -36,7 +36,7 @@
                 if (error != null) {%>
                     <h1>${error}</h1>
                 <%} %>
-            <form method="post" action="/login">
+            <form method="post" action="/signin">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input

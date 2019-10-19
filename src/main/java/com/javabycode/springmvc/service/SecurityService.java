@@ -8,6 +8,7 @@ import java.security.NoSuchAlgorithmException;
 @Service("securityService")
 public class SecurityService implements GuardablePassword{
 
+    public final static String SALT = "-$]}HL[bF9>7G:^zp;kpjrr!ZbvDWgS5%ag3WMVxXL#p!Eus'q~,P5~:p=h$dCHP_?VXcUrqJtvjyP4PNJ.5f}BvFcd]u;*.5~";
     public String generateHashPassword(String input) throws NoSuchAlgorithmException {
         StringBuilder hash = new StringBuilder();
         MessageDigest sha = MessageDigest.getInstance("SHA-1");

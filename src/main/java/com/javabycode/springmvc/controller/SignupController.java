@@ -23,8 +23,6 @@ public class SignupController {
     @Autowired
     private SecurityService securityService;
 
-    private final String SALT = "-$]}HL[bF9>7G:^zp;kpjrr!ZbvDWgS5%ag3WMVxXL#p!Eus'q~,P5~:p=h$dCHP_?VXcUrqJtvjyP4PNJ.5f}BvFcd]u;*.5~";
-
     @RequestMapping(method = RequestMethod.GET)
     public String getPage() {
         return "signup";
@@ -43,7 +41,7 @@ public class SignupController {
         Account accountInDataBase = service.findByEmail(email);
         if (accountInDataBase == null) {
             String currentPassword = account.getPassword();
-            String saltedPassword = currentPassword + SALT;
+            String saltedPassword = currentPassword + SecurityService.SALT;
             String hashedPassword = securityService.generateHashPassword(saltedPassword);
             account.setPassword(hashedPassword);
             service.saveAccount(account);
