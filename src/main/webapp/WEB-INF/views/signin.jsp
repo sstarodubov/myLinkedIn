@@ -26,7 +26,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
     ></script>
-    <title>Registration</title>
+    <title>Login</title>
 </head>
 <body>
 <div class="container mt-5">
@@ -35,7 +35,7 @@
             <% String error = (String) request.getAttribute("error");
                 if (error != null) {%>
                     <h1>${error}</h1>
-                <%} else {%> <h1>Welcome</h1><%}%>
+                <%} %>
             <form method="post" action="/login">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
