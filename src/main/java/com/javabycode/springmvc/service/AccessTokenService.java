@@ -15,7 +15,16 @@ public class AccessTokenService {
     private AccessTokenDao dao;
 
     public final static int TTL = 3600000;
+
     public void save(AccessToken accessToken) {
         dao.save(accessToken);
+    }
+
+    public AccessToken getAccessTokenByValue(String tokenValue) {
+        AccessToken accessToken = dao.findAccessTokenByTokenValue(tokenValue);
+        return accessToken;
+    }
+    public  void remove(AccessToken accessToken) {
+        dao.removeAccessToken(accessToken);
     }
 }

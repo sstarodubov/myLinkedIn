@@ -21,13 +21,15 @@ public class AccessTokenDao  extends AbstractDao<Integer, AccessToken> implement
     }
 
     @Override
-    public AccessToken findAccessTokenByAccountId(int id) {
-//        Query query = getSession().createQuery("")
-        return null;
+    public void save(AccessToken token) {
+        persist(token);
     }
 
     @Override
-    public void save(AccessToken token) {
-        persist(token);
+    public AccessToken findAccessTokenByTokenValue(String value) {
+        Query query = getSession().createQuery("from AccessToken a where a.tokenValue=:value");
+        query.setString("value", value);
+        AccessToken token = (AccessToken) query.uniqueResult();
+        return token;
     }
 }

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.security.NoSuchAlgorithmException;
 
@@ -60,10 +61,12 @@ public class SigninController {
             return "signin";
         }
         String tokenValue = StringRandom.generateRandomString(60);
-        AccessToken token = new AccessToken(AccessTokenService.TTL, account, tokenValue);
+        AccessToken accessToken = new AccessToken(AccessTokenService.TTL, account, tokenValue);
         response.setHeader("Authorization", tokenValue);
-        service.save(token);
-        model.addAttribute("accessToken", tokenValue);
+        service.save(accessToken);
+        Cookie cookie = new Cookie("authentication", tokenValue);
+        cookie.setMaxAge(3600000);
+        response.addCookie(cookie);
         return "redirect: /userProfile/" + account.getId() ;
     }
 

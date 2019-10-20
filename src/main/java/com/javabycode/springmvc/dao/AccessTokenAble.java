@@ -8,7 +8,7 @@ public interface AccessTokenAble {
 
     AccessToken findAccessTokenById(int id);
     void removeAccessToken(AccessToken accessToken);
-    AccessToken findAccessTokenByAccountId(int id);
     void save(AccessToken token);
+    AccessToken findAccessTokenByTokenValue(String value);
 
 }
