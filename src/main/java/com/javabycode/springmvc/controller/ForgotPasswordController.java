@@ -18,7 +18,7 @@ public class ForgotPasswordController {
 
     @GetMapping
     public String getPassword() throws MessagingException {
-        emailService.send("staroduber@yandex.ru", "123123123");
+        emailService.generateAndSendEmailToResetPassword("staroduber@yandex.ru", "aaaaaa");
         return "test";
     }
 }
