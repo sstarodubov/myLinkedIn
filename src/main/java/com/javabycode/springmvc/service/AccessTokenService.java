@@ -24,7 +24,8 @@ public class AccessTokenService {
         AccessToken accessToken = dao.findAccessTokenByTokenValue(tokenValue);
         return accessToken;
     }
-    public  void remove(AccessToken accessToken) {
+
+    public void remove(AccessToken accessToken) {
         dao.removeAccessToken(accessToken);
     }
 }

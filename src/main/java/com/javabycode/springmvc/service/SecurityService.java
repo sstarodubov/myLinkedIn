@@ -9,7 +9,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 @Service("securityService")
-public class SecurityService implements GuardablePassword{
+public class SecurityService implements GuardablePassword {
 
     public final static String SALT = "-$]}HL[bF9>7G:^zp;kpjrr!ZbvDWgS5%ag3WMVxXL#p!Eus'q~,P5~:p=h$dCHP_?VXcUrqJtvjyP4PNJ.5f}BvFcd]u;*.5~";
 
@@ -29,7 +29,7 @@ public class SecurityService implements GuardablePassword{
 
     public String checkAccessToken(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
-        for(Cookie cookie : cookies){
+        for (Cookie cookie : cookies) {
             if (cookie.getName().equals("authentication") && (!cookie.getValue().equals("") || cookie.getValue() == null)) {
                 return cookie.getValue();
             }
