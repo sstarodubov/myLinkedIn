@@ -65,10 +65,10 @@
         </div>
     </div>
     <div class="row justify-content-center pt-4">
-        <a href="/getpassword" class="text-primary" style="text-decoration: underline">Forgot password?</a>
+        <a href="/getPassword" class="text-primary" style="text-decoration: underline">Forgot password?</a>
     </div>
     <div class="row justify-content-center pt-2">
-        <p>if you are not registered <a href="/register" class="text-primary" style="text-decoration: underline">Sign
+        <p>if you are not registered <a href="/signup" class="text-primary" style="text-decoration: underline">Sign
             up!</a></p>
     </div>
 </div>

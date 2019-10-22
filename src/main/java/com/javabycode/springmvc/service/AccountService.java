@@ -33,6 +33,13 @@ public class AccountService {
         return dao.findByEmail(email);
     }
 
+    public void updateEmailAccount(Account account, String email) {
+        dao.updateEmailAccount(account, email);
+    }
+    public void updatePasswordAccount(Account account, String password) {
+        dao.updatePasswordAccount(account, password);
+    }
+
     public Boolean checkInputFields(Account account) {
         String email = account.getEmail();
         String name = account.getName();

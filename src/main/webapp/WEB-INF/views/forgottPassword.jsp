@@ -1,11 +1,9 @@
-
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -29,10 +27,19 @@
 </head>
 <body>
 <div class="bg-primary text-right pr-5 text-white">
-    <a class="text-white" style="font-size: 20px;" href="#">Sign in</a> /
-    <a class="text-white"  style="font-size: 20px;"  href="#">Sign up</a>
+    <a class="text-white" style="font-size: 20px;" href="/signin">Sign in</a> /
+    <a class="text-white" style="font-size: 20px;" href="/signup">Sign up</a>
 </div>
 <div class="container">
+    <% String error = (String) request.getAttribute("error");
+        if (error != null) {%>
+    <h1 style="text-align: center">${error}</h1>
+    <%}
+        String info = (String) request.getAttribute("info");
+        if (info != null) {
+    %>
+    <h1 style="text-align: center">${info}</h1>
+    <%}%>
     <div class="row justify-content-center">
         <div class="col-md-6 col-md-offset-4">
             <div class="panel panel-default">

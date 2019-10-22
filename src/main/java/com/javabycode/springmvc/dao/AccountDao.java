@@ -34,11 +34,16 @@ public class AccountDao extends AbstractDao<Integer, Account> implements Account
     }
 
     @Override
-    public void updateAccount(String field, String value, int id) {
-        Query query = getSession().createQuery("update Account a set a.:field=:value where id=:id");
-        query.setString("field", field);
-        query.setString("value", value);
-        query.setInteger("id", id);
-        query.executeUpdate();
+    public void updateEmailAccount(Account account, String email) {
+        account.setEmail(email);
+        getSession().update(account);
     }
+
+    @Override
+    public void updatePasswordAccount(Account account, String password) {
+        account.setPassword(password);
+        getSession().update(account);
+    }
+
+
 }
