@@ -26,7 +26,6 @@ public class EditProfileController {
     @Autowired
     private ProfileService profileService;
 
-
     @Autowired
     private SecurityService securityService;
 
@@ -45,11 +44,9 @@ public class EditProfileController {
             response.setStatus(422);
             return "redirect:/signin";
         }
-        long createdTimestamp = accessToken.getCreated().getTime();
-        Date date = new Date();
-        long currentTimestamp = date.getTime();
-        long difference = currentTimestamp - createdTimestamp;
-        if (difference > AccessTokenService.TTL) {
+
+        Boolean isAccessTokenLive = accessTokenService.checkAccessTokenTTL(accessToken);
+        if (!isAccessTokenLive) {
             response.setStatus(422);
             accessTokenService.remove(accessToken);
             return "redirect:/signin";
@@ -65,9 +62,8 @@ public class EditProfileController {
         String softSkills = profile.getSkills().getSoftskills();
         String hardSkills = profile.getSkills().getHardskills();
         String position = profile.getSkills().getPosition();
-        List<String> softSkillsList = new ArrayList<>(Arrays.asList(softSkills.split(",")));
         List<String> hardSkillsList = new ArrayList<>(Arrays.asList(hardSkills.split(",")));
-        model.addAttribute("softSkills", softSkillsList);
+        model.addAttribute("softSkills", softSkills);
         model.addAttribute("hardSkills", hardSkillsList);
         model.addAttribute("position", position);
         return "editPage";

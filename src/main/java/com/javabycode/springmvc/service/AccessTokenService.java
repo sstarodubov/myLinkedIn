@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Date;
 
 @Service("accessTokenService")
 @Transactional
@@ -27,5 +28,14 @@ public class AccessTokenService {
 
     public void remove(AccessToken accessToken) {
         dao.removeAccessToken(accessToken);
+    }
+
+    public Boolean checkAccessTokenTTL(AccessToken token) {
+        long createdTimestamp = token.getCreated().getTime();
+        Date date = new Date();
+        long currentTimestamp = date.getTime();
+        long difference = currentTimestamp - createdTimestamp;
+        if (difference > AccessTokenService.TTL) return false;
+        return true;
     }
 }
