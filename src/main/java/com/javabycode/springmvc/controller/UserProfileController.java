@@ -2,7 +2,9 @@ package com.javabycode.springmvc.controller;
 
 import com.javabycode.springmvc.model.AccessToken;
 import com.javabycode.springmvc.model.Account;
+import com.javabycode.springmvc.model.Profile;
 import com.javabycode.springmvc.service.AccessTokenService;
+import com.javabycode.springmvc.service.ProfileService;
 import com.javabycode.springmvc.service.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,7 @@ public class UserProfileController {
 
     @Autowired
     private AccessTokenService accessTokenService;
+
 
     @GetMapping(value = "/{userId}")
     public String getUserProfile(@PathVariable String userId, HttpServletResponse response, HttpServletRequest request) {
