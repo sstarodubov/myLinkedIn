@@ -147,9 +147,19 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="px-xl-3">
-                                <a class="btn btn-block btn-secondary" href="/login">
+                                <a class="btn btn-block btn-secondary" href="/logout">
                                     <i class="fa fa-sign-out"></i>
                                     <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="px-xl-3">
+                                <a class="btn btn-block btn-secondary" href="/userProfile/">
+                                    <i class="fa fa-sign-out"></i>
+                                    <span>Profile</span>
                                 </a>
                             </div>
                         </div>
