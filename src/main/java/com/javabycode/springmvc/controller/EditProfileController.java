@@ -62,9 +62,8 @@ public class EditProfileController {
         String softSkills = profile.getSkills().getSoftskills();
         String hardSkills = profile.getSkills().getHardskills();
         String position = profile.getSkills().getPosition();
-        List<String> hardSkillsList = new ArrayList<>(Arrays.asList(hardSkills.split(",")));
         model.addAttribute("softSkills", softSkills);
-        model.addAttribute("hardSkills", hardSkillsList);
+        model.addAttribute("hardSkills", hardSkills);
         model.addAttribute("position", position);
         return "editPage";
     }
