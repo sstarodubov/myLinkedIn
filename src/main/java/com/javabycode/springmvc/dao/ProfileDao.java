@@ -9,8 +9,8 @@ import org.hibernate.Query;
 @Repository("profileDao")
 public class ProfileDao extends AbstractDao<Integer, Profile>{
 
-    public void saveProfile(Profile profile) {
-        persist(profile);
+    public void saveOrUpdateProfile(Profile profile) {
+        saveOrUpdate(profile);
     }
 
     public void updateProfile(Profile profile, Skills skills, String photo) {

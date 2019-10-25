@@ -18,7 +18,7 @@
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
-    <form class="form" novalidate="" action="/editProfile" method="post">
+    <form class="form" novalidate="" action="/editProfile" method="post" enctype="multipart/form-data">
         <div class="row flex-lg-nowrap">
             <div class="col">
                 <div class="row">

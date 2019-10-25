@@ -16,7 +16,7 @@ public class ProfileService {
     private ProfileDao dao;
 
     public void saveProfile(Profile profile) {
-        dao.saveProfile(profile);
+        dao.saveOrUpdateProfile(profile);
     }
 
     public void updateProfile(Profile profile, Skills skills, String photo) {
