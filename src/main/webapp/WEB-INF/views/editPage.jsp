@@ -78,7 +78,7 @@
                                                             <div class="form-group">
                                                                 <label>Email</label>
                                                                 <input class="form-control" type="text"
-                                                                       placeholder="user@example.com" value="${email}">
+                                                                       placeholder="user@example.com" name="email" value="${email}">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -105,7 +105,7 @@
                                                             <div class="form-group">
                                                                 <label>About</label>
                                                                 <textarea class="form-control" rows="5"
-                                                                          placeholder="My Bio" >${softSkills}</textarea>
+                                                                          placeholder="My Bio" name="softSkills">${softSkills}</textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -113,7 +113,7 @@
                                                         <div class="col mb-3">
                                                             <div class="form-group">
                                                                 <label>Skills</label>
-                                                                <textarea class="form-control" rows="5" name="skills"
+                                                                <textarea class="form-control" rows="5" name="hardSkills"
                                                                           placeholder="type your skills here">${hardSkills}</textarea>
                                                             </div>
                                                         </div>

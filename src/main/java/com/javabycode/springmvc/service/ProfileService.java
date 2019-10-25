@@ -15,12 +15,12 @@ public class ProfileService {
     @Autowired
     private ProfileDao dao;
 
-    public void saveProfile(Profile profile) {
+    public void saveOrUpdateProfile(Profile profile) {
         dao.saveOrUpdateProfile(profile);
     }
 
-    public void updateProfile(Profile profile, Skills skills, String photo) {
-        dao.updateProfile(profile, skills, photo);
+    public void updateProfile(Profile profile) {
+        dao.updateProfile(profile);
     }
 
     public Profile getProfileByAccountId(Account account) {

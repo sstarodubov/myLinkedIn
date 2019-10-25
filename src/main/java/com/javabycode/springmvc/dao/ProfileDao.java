@@ -13,9 +13,7 @@ public class ProfileDao extends AbstractDao<Integer, Profile>{
         saveOrUpdate(profile);
     }
 
-    public void updateProfile(Profile profile, Skills skills, String photo) {
-        profile.setSkills(skills);
-        profile.setPhoto(photo);
+    public void updateProfile(Profile profile) {
         getSession().update(profile);
     }
 
