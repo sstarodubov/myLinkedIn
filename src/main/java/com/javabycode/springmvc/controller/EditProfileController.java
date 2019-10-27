@@ -5,6 +5,7 @@ import com.javabycode.springmvc.model.Account;
 import com.javabycode.springmvc.model.Profile;
 import com.javabycode.springmvc.model.Skills;
 import com.javabycode.springmvc.service.AccessTokenService;
+import com.javabycode.springmvc.service.AccountService;
 import com.javabycode.springmvc.service.ProfileService;
 import com.javabycode.springmvc.service.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -39,6 +41,9 @@ public class EditProfileController {
 
     @Autowired
     private AccessTokenService accessTokenService;
+
+    @Autowired
+    private AccountService accountService;
 
     private static String UPLOADED_FOLDER = "/home/haxul/IdeaProjects/realProject/spring-mvc-hibernate-mysql-integration-crud-example/upload/";
 
@@ -77,6 +82,7 @@ public class EditProfileController {
         model.addAttribute("softSkills", softSkills);
         model.addAttribute("hardSkills", hardSkills);
         model.addAttribute("position", position);
+        model.addAttribute("accountId", currentAccount.getId());
         return "editPage";
     }
 
@@ -90,8 +96,12 @@ public class EditProfileController {
             @RequestParam("phone") String phone,
             @RequestParam("softSkills") String softSkills,
             @RequestParam("hardSkills") String hardSkills,
+            @RequestParam("currentPassword") String currentPassword,
+            @RequestParam("newPassword") String newPassword,
+            @RequestParam("repeatPassword") String repeatPassword,
             HttpServletResponse response,
-            HttpServletRequest request) throws IOException {
+            HttpServletRequest request,
+            Model model) throws IOException, NoSuchAlgorithmException {
 
         String accessTokenValue = securityService.checkAccessToken(request);
         if (accessTokenValue == null) {
@@ -136,7 +146,27 @@ public class EditProfileController {
             Files.write(path, bytes);
             profile.setPhoto(fileSrc);
         }
+
+        String currentHashedPassword = securityService.generateHashPassword(currentPassword + SecurityService.SALT);
+        Boolean isEqualNewPasswordAndRepeatPassword = newPassword.equals(repeatPassword);
+        Boolean isCurrentPasswordCorrect = currentAccount.getPassword().equals(currentHashedPassword);
+        Boolean isToUpdateCurrentPassword = !currentPassword.equals("") || currentPassword != null;
+
+        if (isToUpdateCurrentPassword && !isCurrentPasswordCorrect) {
+            model.addAttribute("currentPasswordError", "current password is not correct");
+            return "editPage";
+        }
+
+        if (isToUpdateCurrentPassword && !isEqualNewPasswordAndRepeatPassword) {
+            model.addAttribute("newPasswordError", "confirm and new passwords are not matched");
+            return "editPage";
+        }
+
+        String newHashedPassword = securityService.generateHashPassword(newPassword + SecurityService.SALT);
+        accountService.updatePasswordAccount(currentAccount, newHashedPassword);
+
         profileService.saveOrUpdateProfile(profile);
-        return "test";
+        int accountId = currentAccount.getId();
+        return "redirect: /userProfile/" + accountId;
     }
 }

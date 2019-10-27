@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -35,5 +36,11 @@ public class SecurityService implements GuardablePassword {
             }
         }
         return null;
+    }
+
+    public void removeAccessToken(HttpServletResponse response) {
+        Cookie cookie = new Cookie("authentication", "");
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
     }
 }

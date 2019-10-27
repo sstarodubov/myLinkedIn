@@ -18,6 +18,8 @@
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
+    <h5 style="text-align: center">${newPasswordError}</h5>
+    <h5 style="text-align: center">${currentPasswordError}</h5>
     <form class="form" novalidate="" action="/editProfile" method="post" enctype="multipart/form-data">
         <div class="row flex-lg-nowrap">
             <div class="col">
@@ -183,8 +185,8 @@
                         <div class="card mb-3">
                             <div class="card-body">
                                 <div class="px-xl-3">
-                                    <a class="btn btn-block btn-secondary" href="/userProfile/">
-                                        <i class="fa fa-sign-out"></i>
+                                    <a class="btn btn-block btn-secondary" href="/userProfile/${accountId}">
+                                        <i class="fa fa-account"></i>
                                         <span>Profile</span>
                                     </a>
                                 </div>
