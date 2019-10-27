@@ -40,6 +40,9 @@ public class AccountService {
         dao.updatePasswordAccount(account, password);
     }
 
+    public void updateAccount(Account account) {
+        dao.updateAccount(account);
+    }
     public Boolean checkInputFields(Account account) {
         String email = account.getEmail();
         String name = account.getName();

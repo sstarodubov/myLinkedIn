@@ -148,25 +148,28 @@ public class EditProfileController {
         }
 
         String currentHashedPassword = securityService.generateHashPassword(currentPassword + SecurityService.SALT);
-        Boolean isEqualNewPasswordAndRepeatPassword = newPassword.equals(repeatPassword);
-        Boolean isCurrentPasswordCorrect = currentAccount.getPassword().equals(currentHashedPassword);
-        Boolean isToUpdateCurrentPassword = !currentPassword.equals("") || currentPassword != null;
+        boolean isEqualNewPasswordAndRepeatPassword = newPassword.equals(repeatPassword);
+        boolean isCurrentPasswordCorrect = currentAccount.getPassword().equals(currentHashedPassword);
+        boolean isCurrentPasswordEmpty = currentPassword.equals("");
 
-        if (isToUpdateCurrentPassword && !isCurrentPasswordCorrect) {
+        profileService.saveOrUpdateProfile(profile);
+        accountService.updateAccount(currentAccount);
+
+        if (isCurrentPasswordEmpty) return "redirect: /userProfile/" + currentAccount.getId();
+        
+        if (!isCurrentPasswordCorrect) {
             model.addAttribute("currentPasswordError", "current password is not correct");
             return "editPage";
         }
 
-        if (isToUpdateCurrentPassword && !isEqualNewPasswordAndRepeatPassword) {
+        if (!isEqualNewPasswordAndRepeatPassword) {
             model.addAttribute("newPasswordError", "confirm and new passwords are not matched");
             return "editPage";
         }
 
         String newHashedPassword = securityService.generateHashPassword(newPassword + SecurityService.SALT);
-        accountService.updatePasswordAccount(currentAccount, newHashedPassword);
-
-        profileService.saveOrUpdateProfile(profile);
-        int accountId = currentAccount.getId();
-        return "redirect: /userProfile/" + accountId;
+        currentAccount.setPassword(newHashedPassword);
+        accountService.updateAccount(currentAccount);
+        return "redirect: /userProfile/" + currentAccount.getId();
     }
 }

@@ -3,6 +3,7 @@ package com.javabycode.springmvc.controller;
 import com.javabycode.springmvc.model.AccessToken;
 import com.javabycode.springmvc.model.Account;
 import com.javabycode.springmvc.model.Profile;
+import com.javabycode.springmvc.model.Skills;
 import com.javabycode.springmvc.service.AccessTokenService;
 import com.javabycode.springmvc.service.ProfileService;
 import com.javabycode.springmvc.service.SecurityService;
@@ -26,9 +27,12 @@ public class UserProfileController {
     @Autowired
     private AccessTokenService accessTokenService;
 
+    @Autowired
+    private ProfileService profileService;
+
 
     @GetMapping(value = "/{userId}")
-    public String getUserProfile(@PathVariable String userId, HttpServletResponse response, HttpServletRequest request) {
+    public String getUserProfile(Model model, HttpServletResponse response, HttpServletRequest request) {
         String accessTokenValue = securityService.checkAccessToken(request);
         if (accessTokenValue == null) {
             response.setStatus(401);
@@ -49,6 +53,34 @@ public class UserProfileController {
             return "redirect:/signin";
         }
         Account currentAccount = accessToken.getAccount();
+        String email = currentAccount.getEmail();
+        String name = currentAccount.getName();
+        String phone = currentAccount.getPhone();
+        String lastname = currentAccount.getLastname();
+
+        model.addAttribute("email", email);
+        model.addAttribute("name", name);
+        model.addAttribute("phone", phone);
+        model.addAttribute("lastname", lastname);
+
+        Profile profile  = profileService.getProfileByAccountId(currentAccount);
+        if (profile == null) {
+            profile = new Profile();
+            profile.setAccount(currentAccount);
+            return "userProfile";
+        }
+
+        String photo = profile.getPhoto() == null ? "" : profile.getPhoto();
+        model.addAttribute("photo", photo);
+
+        Skills skills = profile.getSkills();
+        if (skills == null) return "userProfile";
+        String softSkills = profile.getSkills().getSoftskills() == null ? "" : profile.getSkills().getSoftskills();
+        String hardSkills = profile.getSkills().getHardskills() == null ? "" : profile.getSkills().getHardskills();
+        String position = profile.getSkills().getPosition() == null ? "" : profile.getSkills().getPosition();
+        model.addAttribute("softSkills", softSkills);
+        model.addAttribute("hardSkills", hardSkills);
+        model.addAttribute("position", position);
         return "userProfile";
     }
 }

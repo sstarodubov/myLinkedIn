@@ -33,40 +33,23 @@
 
 <body>
 <div class="bg-primary text-right pr-5 text-white">
-    <a class="text-white" style="font-size: 20px;" href="/edit">edit page</a> /
+    <a class="text-white" style="font-size: 20px;" href="/editProfile">edit page</a> /
     <a class="text-white" style="font-size: 20px;" href="/logout">log out</a>
 </div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-6">
             <div class="card mt-5" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="${photo}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                    <p class="card-text">
+                        ${softSkills}
+                    </p>
                 </div>
             </div>
-            <h2 class="pt-3">Name Surname</h2>
-            <h3 class="pt-3">Position</h3>
-            <h5 class="py-3">Skills</h5>
-
-            <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-            <h5 class="py-3">Social nets</h5>
-
-            <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
+            <h2 class="pt-3">${name} ${lastname}</h2>
+            <h3 class="pt-3">${position}</h3>
+            <h5 class="py-3">${hardSkills}</h5>
         </div>
     </div>
 

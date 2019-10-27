@@ -45,5 +45,9 @@ public class AccountDao extends AbstractDao<Integer, Account> implements Account
         getSession().update(account);
     }
 
+    public void updateAccount(Account account) {
+        getSession().update(account);
+    }
+
 
 }
