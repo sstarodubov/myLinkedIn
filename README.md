@@ -1,7 +1,5 @@
-#Spring MVC Hibernate Mysql integration CRUD Example 
+Spring MVC Hibernate Mysql 
 
 What you'll need
   
-Build
-
 mvn clean install    
