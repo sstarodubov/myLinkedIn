@@ -33,7 +33,7 @@ public class EmailService {
         generateMailMessage.setContent(emailBody, "text/html");
 
         Transport transport = getMailSession.getTransport("smtp");
-        transport.connect("smtp.gmail.com", "javastarodubovsergei@gmail.com", "");
+        transport.connect("smtp.gmail.com", "", "");
         transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
         transport.close();
     }
